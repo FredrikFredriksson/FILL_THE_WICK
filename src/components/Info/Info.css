@@ -1,0 +1,62 @@
+.infoContainer {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media (max-width: 1150px) {
+        width: 80%;
+    }
+}
+
+.contract {
+    padding: 20px;
+    background-color: #568736;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contract:hover {
+    cursor: pointer;
+}
+.contract span:first-child {
+    margin-right: 10px; /* Adjust as needed */
+  }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about span {
+    font-style: italic;
+}
+
+.about h1 {
+    font-size: 40px;
+
+    @media (max-width: 768px ) {
+        font-size: 30px;
+    }
+}
+
+.about h3 {
+    font-size: 24px;
+    line-height: 1.7;  
+    
+    @media (max-width: 768px ) {
+        font-size: 18px;
+    }
+}
+
+.fuckTheDev {
+    color: rgb(207, 4, 4); 
+}
+
+.FTW {
+    color: green;
+}

@@ -1,0 +1,43 @@
+@keyframes blinkingBackground {
+    0%   { background-color: rgb(59, 246, 42); }
+    25%  { background-color: rgb(15, 154, 40); }
+    50%  { background-color: green; }
+    75%  { background-color: rgb(34, 121, 16); }
+    100% { background-color: rgb(7, 225, 47); }
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.buyButton {
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Apply the animation */
+    animation: blinkingBackground 4s linear infinite;
+
+    @media(max-width: 600px) {
+        width: 300px;
+        font-size: 25px;
+    }
+
+    @media(max-width: 425px) {
+      width: 200px;
+      font-size: 20px;
+  }
+  }
+  
+  .container a {
+    text-decoration: none;
+  }
