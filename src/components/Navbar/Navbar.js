@@ -5,6 +5,27 @@ import Logo from "../../assets/FTW-LOGO.png";
 function Navbar() {
   return (
     <div className="navbar">
+      {/* Logo on the left side */}
+      <div className="navbarItem logo">
+        <a
+          href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Logo} alt="logo" />
+        </a>
+        <div className="logoText">
+          <a
+            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FTW
+          </a>
+        </div>
+      </div>
+
+      {/* Navigation items on the right side */}
       <div className="navbarGroup">
         <div className="navbarItem">
           <a href="#tokenomics">TOKENOMICS</a>
@@ -18,19 +39,6 @@ function Navbar() {
             CHARTS
           </a>
         </div>
-      </div>
-
-      <div className="navbarItem logo">
-        <a
-          href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="image" src={Logo} alt="logo" />
-        </a>
-      </div>
-
-      <div className="navbarGroup">
         <div className="navbarItem">
           <a href="#socials">SOCIALS</a>
         </div>

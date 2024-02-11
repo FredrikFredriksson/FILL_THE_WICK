@@ -9,7 +9,7 @@ function Buy() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="buyButton">BUY $FTW</div>
+        <div className="buyButton">BUY FTW</div>
       </a>
     </div>
   );
