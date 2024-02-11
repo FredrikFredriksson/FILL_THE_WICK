@@ -5,7 +5,6 @@ import Logo from "../../assets/FTW-LOGO.png";
 function Navbar() {
   return (
     <div className="navbar">
-      {/* Logo on the left side */}
       <div className="navbarItem logo">
         <a
           href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
@@ -24,8 +23,6 @@ function Navbar() {
           </a>
         </div>
       </div>
-
-      {/* Navigation items on the right side */}
       <div className="navbarGroup">
         <div className="navbarItem">
           <a href="#tokenomics">TOKENOMICS</a>

@@ -2,12 +2,6 @@ import React from "react";
 import "./Info.css";
 
 function Info() {
-  const contractAddress = "4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P";
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(contractAddress);
-    alert("Contract address copied to clipboard!"); // Optional: alert the user
-  };
   return (
     <div className="infoContainer">
       <div className="about" id="about">

@@ -9,9 +9,8 @@ function Header() {
       className="containerHeader"
       style={{
         backgroundImage: `url(${fillBg})`,
-        backgroundSize: "cover", // Ensures the background covers the div
+        backgroundSize: "cover",
         backgroundPosition: "center",
-        // Keeps the background centered
       }}
     >
       <div className="header">
@@ -23,7 +22,7 @@ function Header() {
         </h3>
         <p className="headerText">
           Join the sacred quest for celestial gains. Ignite your candles, pray
-          for prosperity, and let the divine wick guide you to glory. 
+          for prosperity, and let the divine wick guide you to glory.
         </p>
         <div className="headerBuy">
           <Buy />
