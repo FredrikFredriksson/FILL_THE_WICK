@@ -6,40 +6,6 @@
     background-color: #fff;
     position: relative; /* Set position to relative */
   }
-  
-
-  .ceoImage {
-    height: 500px;
-    width: 500px;
-    position: fixed; /* Position it absolutely within .main */
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Align to the left */
-
-    @media (max-width: 1650px) {
-      width: 250px;
-      height: 250px;
-    }
-
-    @media (max-width: 1150px) {
-      display: none;
-    }
-  }
-
-  .ceoImage2 {
-    height: 600px;
-    width: 500px;
-    position: fixed; /* Position it absolutely within .main */
-    bottom: 0; /* Align to the bottom */
-    right: 0; /* Align to the left */
-    @media (max-width: 1650px) {
-      width: 250px;
-      height: 500px;
-    }
-
-    @media (max-width: 1150px) {
-      display: none;
-    }
-  }
 
   .pepe {
 

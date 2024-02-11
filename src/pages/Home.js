@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import CEO from "../assets/FTW-CEO.png";
 import Buy from "../components/BuyToken/Buy";
 import Info from "../components/Info/Info";
 import Header from "../components/Header/Header";
