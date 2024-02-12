@@ -36,7 +36,7 @@
 }
 
 .about h1 {
-  margin: -180px 0 5px 0;
+  margin: -250px 0 5px 0;
   font-size: 40px;
   color: #26ef8e;
   @media (max-width: 768px) {

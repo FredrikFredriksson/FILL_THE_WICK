@@ -8,9 +8,7 @@ function Header() {
     <div
       className="containerHeader"
       style={{
-        backgroundImage: `url(${fillBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundImage: `url(${fillBg})`
       }}
     >
       <div className="header">
