@@ -1,0 +1,45 @@
+
+
+.container {
+  position: relative; /* Establish the basis for the absolute positioning of pseudo-elements */
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 40px; 
+  background-color: #fff;  
+  width: 320px;
+  border-radius: 15px;
+  color: black;
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the rounded corners */
+  height: 480px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 5px; /* Spacing from the top edge */
+  bottom: 5px; /* Spacing from the bottom edge */
+  left: 5px; /* Spacing from the left edge */
+  right: 5px; /* Spacing from the right edge */
+  border: 3px solid #3DAC78; /* The inner border color and width */
+  pointer-events: none; /* Prevent the pseudo-element from capturing mouse events */
+  border-radius: 12px; /* Slightly less than the container's border-radius to maintain the curved effect */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h2 {
+
+  margin: 0;
+  color: #26ef8e !important;
+}
+
+.header p {
+  margin-top: 25px;
+  line-height: 1.7;
+}
+

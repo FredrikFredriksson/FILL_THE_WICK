@@ -1,0 +1,24 @@
+.container {
+  position: fixed; /* Make the position fixed to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
+  display: flex;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.buyButton {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px; /* Adjusted font size for aesthetics */
+  background-color: #26ef8e;
+  text-align: center; /* Ensure text is centered */
+  
+}
+
+.container a {
+  text-decoration: none;
+}

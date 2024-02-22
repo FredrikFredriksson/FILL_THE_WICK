@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  font-size: 46px;
+  color: #fff;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block; /* Ensures the container fits the content */
+  padding-bottom: 10px; /* Adjust space between text and underline */
+}
+
+.header h1::after {
+  content: ''; /* Required for pseudo-elements */
+  display: block; /* Treat the pseudo-element like a block for sizing */
+  width: 70%; /* Underline width relative to the h1 element */
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Matches the color of the text */
+  position: absolute;
+  left: 15%; /* Centers the underline (100% - 25%) / 2 = 37.5% */
+  bottom: 0; /* Position at the bottom of the h1 element */
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+ 
+}
+
+.info {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info h2 {
+  color: #26ef8e;
+}
+
+.header {
+  margin: 0; 
+}
+
+@media (max-width: 980px) {
+  .infoContainer {
+    flex-direction: column;
+    gap: 2rem;   
+    align-items: center; 
+  }
+}
+

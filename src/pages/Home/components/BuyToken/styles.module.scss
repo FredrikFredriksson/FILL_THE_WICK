@@ -1,0 +1,26 @@
+
+.container {
+    display: flex;
+    justify-content: center;   
+}
+
+.buyButton {
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  
+    /* Apply the animation */
+    background-color: #26ef8e;
+  }
+  
+  .container a {
+    text-decoration: none;
+  }

@@ -1,11 +1,10 @@
-/* Adjust the root variables to match the image design */
 :root {
-  --navbar-height: 80px; /* Set a fixed height for the navbar */
-  --navbar-background-color: #ffffff; /* White background for the navbar */
-  --navbar-text-color: #26ef8e; /* Green text color to match your design */
-  --navbar-hover-color: #26ef8e; /* Lighter green for hover effect */
-  --navbar-font-size: 1rem; /* Adjust the font size to match the image */
-  --navbar-item-spacing: 2rem; /* Space between navbar items */
+  --navbar-height: 80px;
+  --navbar-background-color: #ffffff;
+  --navbar-text-color: #26ef8e;
+  --navbar-hover-color: #26ef8e;
+  --navbar-font-size: 1rem; 
+  --navbar-item-spacing: 2rem;
 }
 
 .navbar {
@@ -16,95 +15,121 @@
   background-color: var(--navbar-background-color);
   color: var(--navbar-text-color);
   padding: 0 10%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow to navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  /* Give the logo a fixed width and auto margin to push it to the left */
-  flex: 0 0 220px; /* Adjust the width as necessary */
-  margin-right: auto; /* This pushes the following elements to the right */
+  flex: 0 0 220px;
+  margin-right: auto;
 }
 
-/* Adjust the .image class if you have specific dimensions for your logo */
 .image {
-  width: 100%; /* This will make the logo responsive to the .logo container */
-  height: auto; /* Keep the height auto to maintain the aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 .logo img {
   width: 80px;
   height: 80px;
 }
-/* Rest of the CSS remains unchanged */
 
 .navbarGroup {
   display: flex;
   gap: var(--navbar-item-spacing);
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarItem a {
   text-decoration: none;
   color: var(--navbar-text-color);
   font-size: 20px;
-   /* Making the font a bit bolder */
-  padding-bottom: 0.5rem; /* Space for the underline */
-  transition: all 0.4s ease; /* Smooth transition for hover and active effects */
-  position: relative; /* Needed to position the pseudo-elements */
+  padding-bottom: 0.5rem;
+  transition: all 0.4s ease;
+  position: relative;
   overflow: hidden;
 }
 
 .navbarItem a::after {
-  content: '';
+  content: "";
   display: block;
-  width: 0; /* Start with a width of 0 */
+  width: 0;
   height: 2px;
-  background-color: var(--navbar-hover-color); /* Use the green color for the underline */
+  background-color: var(
+    --navbar-hover-color
+  );
   position: absolute;
   bottom: 0;
-  left: 0; /* Start from the center */
-  transition: width 0.5s ease, left 0.5s ease; /* Smooth transition for width and starting position */
-  transform: translateX(0); /* Ensure it grows from the center */
+  left: 0;
+  transition: width 0.5s ease, left 0.5s ease;
+  transform: translateX(0);
 }
 
-.logo { display: flex; align-items: center; gap: 2rem;}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .logoText a {
-  font-size: 35px; 
+  font-size: 35px;
 }
 
 .navbarItem a:hover::after {
-  width: 100%; /* Full width on hover */
-  left: 0; /* Start expanding from the left */
+  width: 100%; 
+  left: 0; 
 }
 
 .navbarItem a.active::after {
-  width: 100%; /* Ensure it's also full width for active links, if you use this class */
+  width: 100%; 
   left: 0;
 }
-
-
-/* Responsive adjustments */
-@media (max-width: 1325px) {
-  :root {
-    --navbar-font-size: 0.9rem;
-  }
+.burger {
+  display: none;
 }
 
-@media (max-width: 800px) {
-  :root {
-    --navbar-font-size: 0.8rem;
-    --navbar-height: 60px;
-  }
+.hidden {
+  display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 920px) {
   .navbarGroup {
-    gap: 1rem;
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    position: absolute;
+    top: var(--navbar-height);
+    right: 0;
+    background-color: var(--navbar-background-color);
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it's on top of other elements */
+  }
+
+  .navbarGroup.visible {
+    display: flex;
+
+  }
+
+  .navbarItem {
+    margin: 0.5rem 0;
+    width: 100%; 
+    text-align: end;/* Full width for each navbar item */
+  }
+
+  /* Styles for the burger menu icon */
+  .burger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 20px; /* Adjust as needed for your design */
+    right: 20px; /* Adjust as needed for your design */
+    z-index: 101; /* Ensure burger is above the navbarGroup */
   }
 }
 
-@media (max-width: 330px) {
-  .navbarGroup {
-    gap: 0.5rem;
+@media (max-width: 340px) {
+  .logoText {
+    display: none;
   }
 }

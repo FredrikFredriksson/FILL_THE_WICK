@@ -7,3 +7,9 @@ body {
   margin: 0;
   font-family: 'Plump', sans-serif; /* Use the custom font */
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

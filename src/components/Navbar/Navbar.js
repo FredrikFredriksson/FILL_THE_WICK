@@ -1,32 +1,54 @@
 import React from "react";
 import "./Navbar.css";
-import Logo from "../../assets/FTW-LOGO.png";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 function Navbar() {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const navigate = useNavigate();
+
+  // Update the logo path to use the public URL
+  const Logo = `${process.env.PUBLIC_URL}/assets/FTW-LOGO.png`;
+
+  const handleNavLinkClick = (path, sectionId) => (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    navigate(path); // Navigate programmatically to the home page
+    // Wait for the navigation to complete and then scroll to the section
+    setTimeout(() => scrollToSection(sectionId), 0);
+  };
   return (
     <div className="navbar">
       <div className="navbarItem logo">
-        <a
-          href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="/">
           <img src={Logo} alt="logo" />
-        </a>
+        </Link>
         <div className="logoText">
-          <a
-            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P&fixed=in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FTW
-          </a>
+          <Link to="/">FTW</Link>
         </div>
       </div>
-      <div className="navbarGroup">
+      <FiMenu
+        className="burger"
+        onClick={() => setIsNavVisible(!isNavVisible)}
+      />
+      <div className={`navbarGroup ${isNavVisible ? "visible" : ""}`}>
         <div className="navbarItem">
-          <a href="#tokenomics">TOKENOMICS</a>
+          <Link to="/partner">Partner</Link>
         </div>
+        <div className="navbarItem">
+          <a href="/" onClick={handleNavLinkClick("/", "how-it-works")}>
+            How It Works
+          </a>
+        </div>
+
         <div className="navbarItem">
           <a
             href="https://dexscreener.com/solana/ec3evv61znp6j2mml14nnbnzwvhvizhtg47phyhrvfav"
@@ -36,11 +58,15 @@ function Navbar() {
             CHARTS
           </a>
         </div>
+        {/* <div className="navbarItem">
+          <a href="/" onClick={handleNavLinkClick("/", "socials")}>
+            SOCIALS
+          </a>
+        </div> */}
         <div className="navbarItem">
-          <a href="#socials">SOCIALS</a>
-        </div>
-        <div className="navbarItem">
-          <a href="#about">ABOUT</a>
+          <a href="/" onClick={handleNavLinkClick("/", "about")}>
+            ABOUT
+          </a>
         </div>
       </div>
     </div>

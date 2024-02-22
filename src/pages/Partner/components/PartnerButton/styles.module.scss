@@ -1,0 +1,21 @@
+.button {
+  padding: 20px;
+  border-radius: 50px;
+  margin: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  text-shadow: none;
+
+  /* Apply the animation */
+  background-color: #26ef8e;
+}
+
+.container a {
+  text-decoration: none;
+}

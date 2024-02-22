@@ -1,0 +1,37 @@
+.tokenomicsContainer {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 400px;
+  height: 450px;
+}
+
+.tokenomics {
+  color: #26ef8e;
+  font-size: 40px;
+}
+
+.tokenomicsItem a {
+  text-decoration: 0;
+  color: orange; 
+}
+
+.tokenomicsItem {
+  display: flex;
+  
+  
+  flex-direction: column;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  
+  color: black;
+}
+
+.contract {
+  color: black !important;
+}
+
+

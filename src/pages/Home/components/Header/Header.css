@@ -1,0 +1,70 @@
+.containerHeader {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 50px;
+    width: 100%;
+    height: 870px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    text-align: left; /* Ensure text is aligned to the left */
+    padding-left: 70px; /* Add some padding on the left to not stick to the edge */
+    width: 75%; /* Ensure the container spans the full width */
+    
+}
+.headerTitle, .headerSub {
+    align-self: flex-start; /* Align self to start (left) for individual control if needed */
+    max-width: 500px;
+}
+.headerText {
+    align-self: flex-start;
+    max-width: 520px;
+    color: #ffffef;
+    text-shadow: 2px 2px black;
+    line-height: 1.6;
+    font-size: 16px;
+}
+.headerTitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ffffef;  
+    text-shadow: 2px 2px black; 
+}
+
+.headerSub {
+    display: flex;
+    font-size: 25px;
+    margin-top: 0;
+    align-items:center;
+    justify-content: center;
+    color: #26ef8e;
+    text-shadow: 2px 2px black;
+
+    @media (max-width: 1024px) {
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 18px;
+    }
+}
+
+.headerBuy 
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+
+}
