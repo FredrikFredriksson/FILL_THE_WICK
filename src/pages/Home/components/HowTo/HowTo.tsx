@@ -1,7 +1,6 @@
 import React from "react";
 import HowToList from "./components/HowToList/HowToList";
 import styles from "./styles.module.scss";
-import Buy from "../BuyToken/Buy";
 
 function HowTo() {
   return (
