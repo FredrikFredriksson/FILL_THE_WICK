@@ -10,7 +10,7 @@ function HowToItem({ title, text, image }: HowToItemProps) {
   return (
     <div className={styles.container}>
       <div className={styles.headerImage}>
-        <img src={image} alt="Header Image" width={300} height={300} />
+        <img src={image} alt="Header" width={300} height={300} />
       </div>
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>{title}</h2>
