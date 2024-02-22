@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
@@ -16,13 +16,11 @@ function Navbar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const navigate = useNavigate();
 
-  // Update the logo path to use the public URL
   const Logo = `${process.env.PUBLIC_URL}/assets/FTW-LOGO.png`;
 
   const handleNavLinkClick = (path, sectionId) => (event) => {
-    event.preventDefault(); // Prevent default anchor behavior
-    navigate(path); // Navigate programmatically to the home page
-    // Wait for the navigation to complete and then scroll to the section
+    event.preventDefault();
+    navigate(path);
     setTimeout(() => scrollToSection(sectionId), 0);
   };
   return (
@@ -58,11 +56,6 @@ function Navbar() {
             CHARTS
           </a>
         </div>
-        {/* <div className="navbarItem">
-          <a href="/" onClick={handleNavLinkClick("/", "socials")}>
-            SOCIALS
-          </a>
-        </div> */}
         <div className="navbarItem">
           <a href="/" onClick={handleNavLinkClick("/", "about")}>
             ABOUT
