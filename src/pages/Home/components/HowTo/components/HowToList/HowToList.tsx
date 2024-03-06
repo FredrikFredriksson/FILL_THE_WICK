@@ -14,7 +14,7 @@ function HowToList() {
         title="1. BUY FTW"
         text={
           <>
-            Dive into the airdrop revolution by purchasing $FTW via{" "}
+            Dive into the airdrop revolution by purchasing <span>$FTW</span> via{" "}
             <a
               href="https://jup.ag/swap/SOL-FTW_4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P"
               target="_blank"
@@ -22,15 +22,21 @@ function HowToList() {
             >
               Jupiter
             </a>
-            . Your journey with Fill The Wick begins here.
+            . <br />
+            <br />
+            Your journey with Fill The Wick begins here.
           </>
         }
         image={GiveCoin}
       />
       <HowToItem
         title="2. Hold"
-        text="Secure $FTW in your wallet and stand by. Remember, to earn, you simply hold. No sales, just consistent rewards.
-        "
+        text={
+          <>
+            Secure <span>$FTW</span> in your wallet and stand by. Remember, to
+            earn, you simply hold. No sales, just consistent rewards.
+          </>
+        }
         image={Hold}
       />
       <HowToItem
