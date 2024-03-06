@@ -24,7 +24,7 @@ function Header() {
         </div>
       </div>
       <div className="imageContainer">
-        <img className="headerImage" src={fillBg} />
+        <img className="headerImage" alt="header" src={fillBg} />
       </div>
     </div>
   );
