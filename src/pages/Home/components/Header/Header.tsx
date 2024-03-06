@@ -7,12 +7,7 @@ function Header() {
   const fillBg = `${process.env.PUBLIC_URL}/assets/fillbg.png`;
 
   return (
-    <div
-      className="containerHeader"
-      style={{
-        backgroundImage: `url(${fillBg})`
-      }}
-    >
+    <div className="containerHeader">
       <div className="header">
         <h1 className="headerTitle">
           FILL <br /> THE WICK
@@ -27,6 +22,9 @@ function Header() {
         <div className="headerBuy">
           <Buy />
         </div>
+      </div>
+      <div className="imageContainer">
+        <img className="headerImage" src={fillBg} />
       </div>
     </div>
   );

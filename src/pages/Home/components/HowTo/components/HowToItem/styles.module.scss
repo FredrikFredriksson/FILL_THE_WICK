@@ -1,11 +1,10 @@
 .container {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 350px;
-  padding: 30px; 
- 
+  padding: 30px;
 }
 
 .headerImage img {
@@ -16,6 +15,43 @@
   color: #26ef8e;
 }
 
+.text a {
+  text-decoration: none;
+  color: #26ef8e;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block; /* Ensures the container fits the content */
+}
+
+.text a::after {
+  content: ""; /* Required for pseudo-elements */
+  display: block; /* Treat the pseudo-element like a block for sizing */
+  width: 70%; /* Underline width relative to the h1 element */
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Matches the color of the text */
+  position: absolute;
+  left: 15%; /* Centers the underline (100% - 25%) / 2 = 37.5% */
+  bottom: 0; /* Position at the bottom of the h1 element */
+}
+
+.text span {
+  text-decoration: none;
+  color: #26ef8e;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block;
+}
+
+.text span::after {
+  content: ""; /* Required for pseudo-elements */
+  display: block; /* Treat the pseudo-element like a block for sizing */
+  width: 70%; /* Underline width relative to the h1 element */
+  height: 2px; /* Thickness of the underline */
+  background-color: currentColor; /* Matches the color of the text */
+  position: absolute;
+  left: 15%; /* Centers the underline (100% - 25%) / 2 = 37.5% */
+  bottom: 0; /* Position at the bottom of the h1 element */
+}
+
 .text {
   line-height: 1.7;
+  text-align: center;
 }

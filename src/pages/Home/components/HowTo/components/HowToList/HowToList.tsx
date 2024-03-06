@@ -11,18 +11,40 @@ function HowToList() {
   return (
     <div className={styles.listContainer}>
       <HowToItem
-        title="Buy FTW"
-        text="Go to Raydium and Purchase FTW."
+        title="1. BUY FTW"
+        text={
+          <>
+            Dive into the airdrop revolution by purchasing $FTW via{" "}
+            <a
+              href="https://jup.ag/swap/SOL-FTW_4KJaJJxZRdeX9L8sZbPfGMCGex9LgmXr2wtyncFiv58P"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jupiter
+            </a>
+            . Your journey with Fill The Wick begins here.
+          </>
+        }
         image={GiveCoin}
       />
       <HowToItem
-        title="Hold"
-        text="Keep your FTW in your wallet, do not sell them."
+        title="2. Hold"
+        text="Secure $FTW in your wallet and stand by. Remember, to earn, you simply hold. No sales, just consistent rewards.
+        "
         image={Hold}
       />
       <HowToItem
-        title="Recieve"
-        text="Congratulations, you held your FTW and you are now rewarded with several unique airdrops from up and coming projects."
+        title="3. Recieve"
+        text={
+          <>
+            Holding $FTW qualifies you for a steady flow of airdrops from
+            emerging Solana tokens.
+            <br />
+            <br />
+            The more <span>$FTW</span> you hold, the greater your share of the
+            airdrop spoils.
+          </>
+        }
         image={Recieve}
       />
     </div>

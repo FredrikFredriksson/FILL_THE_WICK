@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 type HowToItemProps = {
   title: string;
-  text: string;
+  text: React.ReactNode;
   image: string;
 };
 function HowToItem({ title, text, image }: HowToItemProps) {
@@ -16,7 +16,9 @@ function HowToItem({ title, text, image }: HowToItemProps) {
         <h2 className={styles.title}>{title}</h2>
       </div>
       <div className={styles.textContainer}>
-        <p className={styles.text}>{text}</p>
+        <p className={styles.text}>
+          {typeof text === "string" ? <p>{text}</p> : text}
+        </p>
       </div>
     </div>
   );

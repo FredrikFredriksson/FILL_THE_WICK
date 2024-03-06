@@ -5,7 +5,7 @@
   justify-content: flex-start;
   margin-left: 20px;
   margin-right: 20px;
-  width: 400px;
+  max-width: 400px;
   height: 450px;
 }
 
@@ -16,22 +16,20 @@
 
 .tokenomicsItem a {
   text-decoration: 0;
-  color: orange; 
+  color: orange;
 }
 
 .tokenomicsItem {
   display: flex;
-  
-  
+
   flex-direction: column;
   margin-bottom: 20px;
   line-height: 1.7;
-  
+
   color: black;
 }
 
 .contract {
   color: black !important;
+  word-break: break-all; /* This will ensure the text wraps inside its container */
 }
-
-

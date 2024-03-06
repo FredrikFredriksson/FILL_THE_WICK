@@ -3,7 +3,7 @@
   --navbar-background-color: #ffffff;
   --navbar-text-color: #26ef8e;
   --navbar-hover-color: #26ef8e;
-  --navbar-font-size: 1rem; 
+  --navbar-font-size: 1rem;
   --navbar-item-spacing: 2rem;
 }
 
@@ -54,9 +54,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background-color: var(
-    --navbar-hover-color
-  );
+  background-color: var(--navbar-hover-color);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -75,12 +73,12 @@
 }
 
 .navbarItem a:hover::after {
-  width: 100%; 
-  left: 0; 
+  width: 100%;
+  left: 0;
 }
 
 .navbarItem a.active::after {
-  width: 100%; 
+  width: 100%;
   left: 0;
 }
 .burger {
@@ -107,13 +105,12 @@
 
   .navbarGroup.visible {
     display: flex;
-
   }
 
   .navbarItem {
     margin: 0.5rem 0;
-    width: 100%; 
-    text-align: end;/* Full width for each navbar item */
+    width: 100%;
+    text-align: end; /* Full width for each navbar item */
   }
 
   /* Styles for the burger menu icon */

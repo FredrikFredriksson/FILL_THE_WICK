@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 // Define a type for the component's props
 type InfoItemProps = {
   title: string;
-  text: string;
+  text: React.ReactNode;
 };
 
 // Use the defined type for the function's props

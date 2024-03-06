@@ -1,70 +1,92 @@
 .containerHeader {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 50px;
-    width: 100%;
-    height: 870px;
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  display: flex;
+
+  padding: 0 20px;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 35, 33, 1) 0%,
+    rgba(0, 131, 82, 1) 92%
+  );
 }
 
+.imageContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.headerImage {
+  width: 750px; /* Fixed width to match your specified size */
+  height: 428px; /* Fixed height to match your specified size */
+  object-fit: cover; /* This ensures the image covers the area without losing its aspect ratio */
+
+  @media (max-width: 1166px) {
+    width: 600px;
+    height: 342px;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
 
 .header {
-    display: flex;
-    justify-content: flex-start; /* Align items to the start (left) */
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
-    text-align: left; /* Ensure text is aligned to the left */
-    padding-left: 70px; /* Add some padding on the left to not stick to the edge */
-    width: 75%; /* Ensure the container spans the full width */
-    
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left) */
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  text-align: left; /* Ensure text is aligned to the left */
+  /* Add some padding on the left to not stick to the edge */
+  padding-left: 20px;
 }
-.headerTitle, .headerSub {
-    align-self: flex-start; /* Align self to start (left) for individual control if needed */
-    max-width: 500px;
+.headerTitle,
+.headerSub {
+  align-self: flex-start; /* Align self to start (left) for individual control if needed */
+  max-width: 500px;
 }
 .headerText {
-    align-self: flex-start;
-    max-width: 520px;
-    color: #ffffef;
-    text-shadow: 2px 2px black;
-    line-height: 1.6;
-    font-size: 16px;
+  align-self: flex-start;
+  max-width: 520px;
+  color: #ffffef;
+  text-shadow: 2px 2px black;
+  line-height: 1.6;
+  font-size: 16px;
 }
 .headerTitle {
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: #ffffef;  
-    text-shadow: 2px 2px black; 
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #ffffef;
+  text-shadow: 2px 2px black;
 }
 
 .headerSub {
-    display: flex;
+  display: flex;
+  font-size: 25px;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  color: #ffffef;
+  text-shadow: 2px 2px black;
+
+  @media (max-width: 1024px) {
     font-size: 25px;
-    margin-top: 0;
-    align-items:center;
-    justify-content: center;
-    color: #26ef8e;
-    text-shadow: 2px 2px black;
+  }
 
-    @media (max-width: 1024px) {
-        font-size: 25px;
-        margin: 10px;
-    }
-
-    @media (max-width: 425px) {
-        font-size: 18px;
-    }
+  @media (max-width: 425px) {
+    font-size: 18px;
+  }
 }
 
-.headerBuy 
-{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-
+.headerBuy {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
 }
