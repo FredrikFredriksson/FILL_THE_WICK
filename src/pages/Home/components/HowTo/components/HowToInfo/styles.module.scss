@@ -12,7 +12,11 @@
   color: #fff;
   position: relative; /* Needed for absolute positioning of the pseudo-element */
   display: inline-block; /* Ensures the container fits the content */
-  padding-bottom: 10px; /* Adjust space between text and underline */
+  padding-bottom: 10px; 
+  
+  @media (max-width: 375px) {
+    font-size: 36px;
+  } /* Adjust space between text and underline */
 }
 
 .header h1::after {

@@ -6,6 +6,10 @@
   align-items: flex-start;
   margin-bottom: 40px;
   color: black;
+  text-align: center;
+  @media (max-width: 375px) {
+    padding: 0 20px;
+  }
 }
 
 .about span {
@@ -15,6 +19,7 @@
 .about h1 {
   font-size: 40px;
   color: #26ef8e;
+  align-self: center;
   @media (max-width: 768px) {
     font-size: 30px;
   }

@@ -1,25 +1,28 @@
 .howTo {
   background-color: #fff;
   width: 100%;
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   margin-top: 40px;
   padding-bottom: 40px;
 }
-
 
 .howTo h1 {
   font-size: 46px;
   color: #26ef8e;
   position: relative; /* Needed for absolute positioning of the pseudo-element */
   display: inline-block; /* Ensures the container fits the content */
-  padding-bottom: 10px; /* Adjust space between text and underline */
+  padding-bottom: 10px;
+
+  @media (max-width: 375px) {
+    font-size: 36px;
+  } 
 }
 
 .howTo h1::after {
-  content: ''; /* Required for pseudo-elements */
+  content: ""; /* Required for pseudo-elements */
   display: block; /* Treat the pseudo-element like a block for sizing */
   width: 70%; /* Underline width relative to the h1 element */
   height: 2px; /* Thickness of the underline */
