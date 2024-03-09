@@ -16,8 +16,9 @@ function Header() {
           Wicks are printed solely for the purpose of becoming filled
         </h3>
         <p className="headerText">
-          Join the sacred quest for celestial gains. Ignite your candles, pray
-          for prosperity, and let the divine wick guide you to glory.
+          Discover Solana's first Token Airdrop Incubator. Hold, receive, and
+          grow with a community focused on nurturing and distributing digital
+          wealth through strategic partnerships.
         </p>
         <div className="headerBuy">
           <Buy />
